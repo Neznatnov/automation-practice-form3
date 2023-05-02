@@ -2,7 +2,9 @@ package pages;
 
 import com.codeborne.selenide.SelenideElement;
 import components.CalendarComponent;
-import components.ResultsModal;
+import components.ResultsModalComponent;
+
+
 
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
@@ -10,7 +12,8 @@ import static com.codeborne.selenide.Selenide.*;
 public class RegistrationPage {
 
     CalendarComponent calendarComponent = new CalendarComponent();
-    ResultsModal resultsModal = new ResultsModal();
+    ResultsModalComponent resultsModal = new ResultsModalComponent();
+
 
 
     //Elements
@@ -108,7 +111,6 @@ public class RegistrationPage {
 
         return this;
     }
-
 
 
     public RegistrationPage verifyResult(String key, String value){
