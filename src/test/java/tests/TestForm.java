@@ -1,10 +1,15 @@
 package tests;
 
 import org.junit.jupiter.api.Test;
+import pages.RegistrationPage;
+
 public class TestForm extends TestBase {
+    RegistrationPage registrationPage = new RegistrationPage();
+
     @Test
-    void FirstTest() {
+    void firstTest() {
         registrationPage.openPage()
+                .removeFooter()
                 .setFirstName("Veronika")
                 .setLastName("Iatckaia")
                 .setUserEmail("neznatnov@gmail.com")

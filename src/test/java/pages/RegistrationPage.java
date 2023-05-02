@@ -30,11 +30,18 @@ public class RegistrationPage {
     //Actions
     public RegistrationPage openPage(){
         open("https://demoqa.com/automation-practice-form");
+
+
+        return this;
+    }
+    public RegistrationPage removeFooter(){
         executeJavaScript("$('footer').remove()");
         executeJavaScript("$('#fixedban').remove()");
 
         return this;
+
     }
+
     public RegistrationPage setFirstName(String value){
         firstNameInput.setValue(value);
 
