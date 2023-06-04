@@ -1,6 +1,8 @@
 package tests;
 
 import org.junit.jupiter.api.Test;
+import pages.RegistrationPage;
+
 import static testdata.TestData.*;
 
 
@@ -11,6 +13,7 @@ public class RegistrationFormTest extends TestBase {
     void fillRegistrationForm() {
 
         registrationPage.openPage()
+                .removeFooter()
                 .setFirstName(firstName)
                 .setLastName(lastName)
                 .setUserEmail(userEmail)

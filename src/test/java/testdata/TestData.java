@@ -11,7 +11,7 @@ public class TestData {
                 userEmail = faker.internet().emailAddress(),
                 gender = String.valueOf(faker.options().option(Gender.class).getValue()),
                 userNumber = faker.phoneNumber().subscriberNumber(10),
-                birthDay = String.valueOf(faker.number().numberBetween(1, 31)),
+                birthDay = String.format("%02d", faker.number().numberBetween(1, 25)),
                 birthYear = String.valueOf(faker.number().numberBetween(1900,2100)),
                 birthMonth = String.valueOf(faker.options().option(Month.class).getValue()),
                 subject = String.valueOf(faker.options().option(Subject.class)),
