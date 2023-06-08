@@ -10,7 +10,7 @@ public class TestBase {
 
     @BeforeAll
 
-    static void beforeAll(){
+    static void beforeAll() {
         Configuration.browser = "chrome";
         Configuration.browserSize = "1920x1080";
     }

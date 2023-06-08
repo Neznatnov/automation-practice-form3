@@ -1,7 +1,6 @@
 package tests;
 
 import org.junit.jupiter.api.Test;
-import pages.RegistrationPage;
 
 import static testdata.TestData.*;
 
@@ -22,24 +21,24 @@ public class RegistrationFormTest extends TestBase {
                 .setBirthDate(birthDay, birthMonth, birthYear)
                 .setSubject(subject)
                 .setHobbies(hobbies)
-                .setPicture()
+                .setPicture(picture)
                 .setAddress(address)
                 .setState(state)
                 .setCity(city)
                 .clickSubmit();
 
-        
+
         registrationPage.verifyRegistrationResultModalAppears()
-                        .verifyResult("Student Name", firstName + " " + lastName)
-                        .verifyResult("Student Email", userEmail)
-                        .verifyResult("Gender", gender)
-                        .verifyResult("Mobile", userNumber)
-                        .verifyResult("Date of Birth", birthDay + " " + birthMonth + "," + birthYear)
-                        .verifyResult("Subjects", subject)
-                        .verifyResult("Hobbies", hobbies)
-                        .verifyResult("Picture", "cats.jpg")
-                        .verifyResult("Address", address)
-                        .verifyResult("State and City", state + " " + city);
+                .verifyResult("Student Name", firstName + " " + lastName)
+                .verifyResult("Student Email", userEmail)
+                .verifyResult("Gender", gender)
+                .verifyResult("Mobile", userNumber)
+                .verifyResult("Date of Birth", birthDay + " " + birthMonth + "," + birthYear)
+                .verifyResult("Subjects", subject)
+                .verifyResult("Hobbies", hobbies)
+                .verifyResult("Picture", picture)
+                .verifyResult("Address", address)
+                .verifyResult("State and City", state + " " + city);
 
 
     }
